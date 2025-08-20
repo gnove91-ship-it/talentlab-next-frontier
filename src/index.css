@@ -24,12 +24,15 @@ All colors MUST be HSL.
     --popover-foreground: 215 30% 5%;
 
     /* The Talent Lab Brand Colors */
-    --primary: 222 84% 6%; /* Deep Blue #0f172a */
+    --primary: 198 25% 27%; /* New Primary #263147 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 222 50% 15%;
-    --primary-lighter: 222 30% 25%;
+    --primary-light: 198 25% 35%;
+    --primary-lighter: 198 25% 45%;
     
-    --gold: 43 74% 52%; /* Gold #d4af37 */
+    --accent: 71 90% 73%; /* New Accent #cefe82 */
+    --accent-foreground: 198 25% 27%;
+    
+    --gold: 43 74% 52%; /* Keep gold for legacy */
     --gold-light: 43 74% 62%;
     --gold-dark: 43 74% 42%;
 
@@ -40,10 +43,6 @@ All colors MUST be HSL.
     /* Muted System */
     --muted: 215 20% 96%;
     --muted-foreground: 215 15% 45%;
-
-    /* Accent System */
-    --accent: 43 74% 52%;
-    --accent-foreground: 215 30% 5%;
 
     /* Status Colors */
     --destructive: 0 84% 60%;
@@ -60,12 +59,12 @@ All colors MUST be HSL.
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold-light)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), #b6e84e);
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
     
     /* Shadows */
     --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
-    --shadow-gold: 0 5px 20px -5px hsl(var(--gold) / 0.3);
+    --shadow-accent: 0 5px 20px -5px hsl(var(--accent) / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(var(--primary) / 0.1);
 
     /* Animations */
@@ -134,18 +133,14 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-montserrat;
+    @apply bg-background text-primary font-montserrat font-sans;
   }
 }
 
 @layer components {
   /* The Talent Lab Component Styles */
-  .hero-gradient {
-    background: var(--gradient-hero);
-  }
-  
-  .gold-gradient {
-    background: var(--gradient-gold);
+  .accent-gradient {
+    background: var(--gradient-accent);
   }
   
   .primary-gradient {
@@ -156,8 +151,8 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-elegant);
   }
   
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
   }
   
   .shadow-card {
@@ -182,12 +177,12 @@ All colors MUST be HSL.
   }
   
   .hover-glow {
-    @apply transition-smooth hover:shadow-gold;
+    @apply transition-smooth hover:shadow-accent;
   }
   
   /* Text animations */
-  .text-gradient-gold {
-    background: var(--gradient-gold);
+  .text-gradient-accent {
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

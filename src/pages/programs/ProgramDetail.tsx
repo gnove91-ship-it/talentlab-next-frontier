@@ -164,17 +164,17 @@ const ProgramDetail: React.FC = () => {
             {/* Program Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <Clock className="h-8 w-8 text-gold mx-auto mb-2" />
+                <Clock className="h-8 w-8 text-accent mx-auto mb-2" />
                 <div className="text-sm text-primary-foreground/80">Duración</div>
                 <div className="text-lg font-semibold">{program.duration}</div>
               </div>
               <div className="text-center">
-                <BookOpen className="h-8 w-8 text-gold mx-auto mb-2" />
+                <BookOpen className="h-8 w-8 text-accent mx-auto mb-2" />
                 <div className="text-sm text-primary-foreground/80">Formato</div>
                 <div className="text-lg font-semibold">{program.format}</div>
               </div>
               <div className="text-center">
-                <Users className="h-8 w-8 text-gold mx-auto mb-2" />
+                <Users className="h-8 w-8 text-accent mx-auto mb-2" />
                 <div className="text-sm text-primary-foreground/80">Nivel</div>
                 <div className="text-lg font-semibold">{program.level}</div>
               </div>
@@ -182,7 +182,7 @@ const ProgramDetail: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                variant="gold" 
+                variant="accent" 
                 size="lg" 
                 className="group"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -190,7 +190,7 @@ const ProgramDetail: React.FC = () => {
                 Solicitar información
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
               </Button>
-              <Button variant="outline_gold" size="lg" asChild>
+              <Button variant="outline_accent" size="lg" asChild>
                 <Link to="/programas">
                   <ArrowLeft className="mr-2 h-5 w-5" />
                   Volver a Programas
@@ -214,7 +214,7 @@ const ProgramDetail: React.FC = () => {
                 <ul className="space-y-3">
                   {program.modules.map((module, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-gold mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{module}</span>
                     </li>
                   ))}
@@ -231,7 +231,7 @@ const ProgramDetail: React.FC = () => {
                 <ul className="space-y-3">
                   {program.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-gold mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-accent mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{benefit}</span>
                     </li>
                   ))}

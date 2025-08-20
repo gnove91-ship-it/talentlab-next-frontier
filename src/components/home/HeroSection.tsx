@@ -25,7 +25,7 @@ export const HeroSection: React.FC = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 fade-in">
-            <span className="text-gradient-gold">{t.heroTitle.split(' ')[0]}</span>{' '}
+            <span className="text-gradient-accent">{t.heroTitle.split(' ')[0]}</span>{' '}
             {t.heroTitle.split(' ').slice(1).join(' ')}
           </h1>
 
@@ -49,7 +49,7 @@ export const HeroSection: React.FC = () => {
             <Dialog>
               <DialogTrigger asChild>
                 <Button 
-                  variant="outline_gold" 
+                  variant="outline_accent" 
                   size="xl"
                   className="group"
                 >
@@ -73,15 +73,15 @@ export const HeroSection: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 slide-in-up">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gold mb-2">1000+</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">1000+</div>
               <div className="text-primary-foreground/80">Estudiantes Formados</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gold mb-2">15+</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">15+</div>
               <div className="text-primary-foreground/80">Programas Formativos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gold mb-2">95%</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">95%</div>
               <div className="text-primary-foreground/80">Tasa de Éxito</div>
             </div>
           </div>

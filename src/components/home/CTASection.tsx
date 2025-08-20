@@ -15,13 +15,13 @@ export const CTASection: React.FC = () => {
       {/* Decorative Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 border border-primary-foreground/20 rounded-full animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 border border-primary-foreground/10 rounded-full animate-bounce"></div>
-      <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-gold rounded-full animate-ping"></div>
+      <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-accent rounded-full animate-ping"></div>
       <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-primary-foreground/30 rounded-full animate-pulse"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
           {/* Icon */}
-          <div className="w-20 h-20 gold-gradient rounded-2xl flex items-center justify-center mx-auto mb-8 fade-in">
+          <div className="w-20 h-20 accent-gradient rounded-2xl flex items-center justify-center mx-auto mb-8 fade-in">
             <Sparkles className="h-10 w-10 text-primary" />
           </div>
 
@@ -40,7 +40,7 @@ export const CTASection: React.FC = () => {
             <Button 
               variant="hero" 
               size="xl"
-              className="group shadow-gold"
+              className="group shadow-accent"
               asChild
             >
               <Link to="/contact">
@@ -50,7 +50,7 @@ export const CTASection: React.FC = () => {
             </Button>
 
             <Button 
-              variant="outline_gold" 
+              variant="outline_accent" 
               size="xl"
               className="group border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               asChild

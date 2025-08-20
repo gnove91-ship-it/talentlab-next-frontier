@@ -25,7 +25,6 @@ export const Header: React.FC = () => {
     { name: t.programs, href: '/programas' },
     { name: t.about, href: '/about' },
     { name: t.faq, href: '/faq' },
-    { name: t.contact, href: '/contact' },
   ];
 
   const isActive = (href: string) => {
@@ -34,19 +33,15 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-        isScrolled 
-          ? 'glass-dark shadow-elegant' 
-          : 'glass'
-      }`}>
+      <header className="fixed top-0 inset-x-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/10 transition-smooth">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 gold-gradient rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 accent-gradient rounded-lg flex items-center justify-center">
                 <span className="text-primary font-bold text-xl">TL</span>
               </div>
-              <span className="text-xl font-bold text-primary-foreground">
+              <span className="text-xl font-bold text-white">
                 The Talent Lab
               </span>
             </Link>
@@ -59,8 +54,8 @@ export const Header: React.FC = () => {
                   to={item.href}
                   className={`text-sm font-medium transition-smooth ${
                     isActive(item.href)
-                      ? 'text-gold border-b-2 border-gold'
-                      : 'text-primary-foreground hover:text-gold'
+                      ? 'text-accent border-b-2 border-accent'
+                      : 'text-white hover:text-accent'
                   }`}
                 >
                   {item.name}
@@ -86,7 +81,7 @@ export const Header: React.FC = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                className="md:hidden text-primary-foreground"
+                className="md:hidden text-white"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -97,7 +92,7 @@ export const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden glass-dark border-t border-white/10">
+          <div className="md:hidden bg-white/10 backdrop-blur-md border-t border-white/10">
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
@@ -106,8 +101,8 @@ export const Header: React.FC = () => {
                     to={item.href}
                     className={`text-sm font-medium transition-smooth ${
                       isActive(item.href)
-                        ? 'text-gold'
-                        : 'text-primary-foreground hover:text-gold'
+                        ? 'text-accent'
+                        : 'text-white hover:text-accent'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
@@ -130,17 +125,17 @@ export const Header: React.FC = () => {
         )}
       </header>
 
-      {/* Scroll to Top Button */}
-      {isScrolled && (
-        <Button
-          variant="gold"
-          size="icon"
-          className="fixed bottom-6 right-6 z-40 rounded-full shadow-gold bounce-up"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          <ChevronUp className="h-5 w-5" />
-        </Button>
-      )}
+        {/* Scroll to Top Button */}
+        {isScrolled && (
+          <Button
+            variant="accent"
+            size="icon"
+            className="fixed bottom-6 right-6 z-40 rounded-full shadow-accent bounce-up"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <ChevronUp className="h-5 w-5" />
+          </Button>
+        )}
     </>
   );
 };

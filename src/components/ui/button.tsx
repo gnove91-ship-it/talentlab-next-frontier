@@ -19,10 +19,10 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // The Talent Lab custom variants
-        hero: "gold-gradient text-primary font-semibold shadow-gold hover:scale-105 transition-bounce",
+        hero: "accent-gradient text-primary font-semibold shadow-accent hover:scale-105 transition-bounce",
         primary: "primary-gradient text-primary-foreground shadow-elegant hover:-translate-y-1 transition-smooth",
-        gold: "gold-gradient text-primary font-semibold shadow-gold hover:shadow-elegant transition-smooth",
-        outline_gold: "border-2 border-gold text-gold hover:gold-gradient hover:text-primary transition-smooth",
+        accent: "accent-gradient text-primary font-semibold shadow-accent hover:shadow-elegant transition-smooth",
+        outline_accent: "border-2 border-accent text-accent hover:accent-gradient hover:text-primary transition-smooth",
         minimal: "bg-transparent text-primary hover:bg-primary/10 transition-smooth",
       },
       size: {

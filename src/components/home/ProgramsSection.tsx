@@ -78,7 +78,7 @@ export const ProgramsSection: React.FC = () => {
             <Card 
               key={program.id} 
               className={`hover-lift transition-smooth ${
-                program.featured ? 'ring-2 ring-gold/20 shadow-gold' : ''
+                program.featured ? 'ring-2 ring-accent/20 shadow-accent' : ''
               } slide-in-up`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -93,7 +93,7 @@ export const ProgramsSection: React.FC = () => {
                     </CardDescription>
                   </div>
                   {program.featured && (
-                    <div className="bg-gold text-primary px-2 py-1 rounded-full text-xs font-semibold">
+                    <div className="bg-accent text-primary px-2 py-1 rounded-full text-xs font-semibold">
                       Destacado
                     </div>
                   )}
@@ -104,17 +104,17 @@ export const ProgramsSection: React.FC = () => {
                 {/* Program Details */}
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
-                    <Clock className="h-5 w-5 text-gold mx-auto mb-1" />
+                    <Clock className="h-5 w-5 text-accent mx-auto mb-1" />
                     <div className="text-xs text-muted-foreground">{t.duration}</div>
                     <div className="text-sm font-medium text-primary">{program.duration}</div>
                   </div>
                   <div className="text-center">
-                    <BookOpen className="h-5 w-5 text-gold mx-auto mb-1" />
+                    <BookOpen className="h-5 w-5 text-accent mx-auto mb-1" />
                     <div className="text-xs text-muted-foreground">{t.format}</div>
                     <div className="text-sm font-medium text-primary">{program.format}</div>
                   </div>
                   <div className="text-center">
-                    <Users className="h-5 w-5 text-gold mx-auto mb-1" />
+                    <Users className="h-5 w-5 text-accent mx-auto mb-1" />
                     <div className="text-xs text-muted-foreground">{t.level}</div>
                     <div className="text-sm font-medium text-primary">{program.level}</div>
                   </div>
@@ -123,7 +123,7 @@ export const ProgramsSection: React.FC = () => {
                 {/* Rating and Students */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-gold fill-current" />
+                    <Star className="h-4 w-4 text-accent fill-current" />
                     <span className="text-sm font-medium text-primary">{program.rating}</span>
                     <span className="text-xs text-muted-foreground">({program.students} estudiantes)</span>
                   </div>
@@ -131,7 +131,7 @@ export const ProgramsSection: React.FC = () => {
 
                 {/* CTA Button */}
                 <Button 
-                  variant={program.featured ? "gold" : "primary"} 
+                  variant={program.featured ? "accent" : "primary"} 
                   className="w-full group"
                   asChild={program.cta !== 'Solicitar información'}
                   onClick={program.cta === 'Solicitar información' ? () => {
@@ -157,7 +157,7 @@ export const ProgramsSection: React.FC = () => {
 
         {/* View All Programs Button */}
         <div className="text-center fade-in">
-          <Button variant="outline_gold" size="lg" asChild className="group">
+          <Button variant="outline_accent" size="lg" asChild className="group">
             <Link to="/programas">
               Ver Todos los Programas
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
