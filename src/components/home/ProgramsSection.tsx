@@ -10,48 +10,52 @@ export const ProgramsSection: React.FC = () => {
 
   const programs = [
     {
-      id: 'liderazgo',
-      title: 'Liderazgo y Gestión',
-      description: 'Desarrolla habilidades de liderazgo para dirigir equipos de alto rendimiento.',
-      duration: '8 semanas',
+      id: 'orientacion',
+      title: '🎓 Orientación preuniversitaria',
+      description: 'Descubre tu camino académico.',
+      duration: '6 semanas',
       format: 'Híbrido',
       level: 'Intermedio',
       rating: 4.9,
       students: 150,
       featured: true,
+      cta: 'Ver programa'
     },
     {
       id: 'finanzas',
-      title: 'Finanzas Personales',
-      description: 'Aprende a gestionar tus finanzas personales y planificar tu futuro económico.',
-      duration: '6 semanas',
+      title: '💰 Educación financiera',
+      description: 'Domina tus finanzas desde joven.',
+      duration: '8 semanas',
       format: 'Online',
       level: 'Principiante',
       rating: 4.8,
       students: 200,
       featured: false,
+      cta: 'Ver programa'
     },
     {
-      id: 'digital',
-      title: 'Marketing Digital',
-      description: 'Domina las estrategias de marketing digital más efectivas del mercado.',
+      id: 'vida-laboral',
+      title: '💼 Vida laboral',
+      description: 'Prepárate para tu primer empleo.',
       duration: '10 semanas',
       format: 'Presencial',
-      level: 'Avanzado',
+      level: 'Intermedio',
       rating: 4.9,
       students: 95,
       featured: true,
+      cta: 'Ver programa'
     },
     {
-      id: 'emprendimiento',
-      title: 'Emprendimiento',
-      description: 'Convierte tu idea en un negocio exitoso con metodologías probadas.',
+      id: 'liderazgo',
+      title: '🧭 Liderazgo & habilidades',
+      description: 'Comunicación, colaboración y liderazgo aplicado.',
       duration: '12 semanas',
       format: 'Híbrido',
-      level: 'Intermedio',
+      level: 'Avanzado',
       rating: 4.7,
       students: 120,
       featured: false,
+      cta: 'Solicitar información'
     },
   ];
 
@@ -129,12 +133,22 @@ export const ProgramsSection: React.FC = () => {
                 <Button 
                   variant={program.featured ? "gold" : "primary"} 
                   className="w-full group"
-                  asChild
+                  asChild={program.cta !== 'Solicitar información'}
+                  onClick={program.cta === 'Solicitar información' ? () => {
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  } : undefined}
                 >
-                  <Link to={`/programs/${program.id}`}>
-                    {t.learnMore}
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
-                  </Link>
+                  {program.cta === 'Solicitar información' ? (
+                    <>
+                      {program.cta}
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
+                    </>
+                  ) : (
+                    <Link to={`/programas/${program.id}`}>
+                      {program.cta}
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
+                    </Link>
+                  )}
                 </Button>
               </CardContent>
             </Card>
@@ -144,7 +158,7 @@ export const ProgramsSection: React.FC = () => {
         {/* View All Programs Button */}
         <div className="text-center fade-in">
           <Button variant="outline_gold" size="lg" asChild className="group">
-            <Link to="/programs">
+            <Link to="/programas">
               Ver Todos los Programas
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
             </Link>

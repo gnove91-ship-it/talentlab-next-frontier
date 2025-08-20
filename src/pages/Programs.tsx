@@ -10,10 +10,10 @@ const Programs: React.FC = () => {
 
   const allPrograms = [
     {
-      id: 'liderazgo',
-      title: 'Liderazgo y Gestión',
-      description: 'Desarrolla habilidades de liderazgo para dirigir equipos de alto rendimiento y crear un impacto positivo en tu organización.',
-      duration: '8 semanas',
+      id: 'orientacion',
+      title: '🎓 Orientación preuniversitaria',
+      description: 'Descubre tu camino académico y toma las mejores decisiones para tu futuro universitario.',
+      duration: '6 semanas',
       format: 'Híbrido',
       level: 'Intermedio',
       rating: 4.9,
@@ -21,17 +21,17 @@ const Programs: React.FC = () => {
       price: '299€',
       featured: true,
       highlights: [
-        'Gestión de equipos',
-        'Comunicación efectiva',
-        'Toma de decisiones',
-        'Inteligencia emocional'
+        'Exploración de carreras',
+        'Orientación vocacional',
+        'Preparación para selectividad',
+        'Técnicas de estudio avanzadas'
       ]
     },
     {
       id: 'finanzas',
-      title: 'Finanzas Personales',
-      description: 'Aprende a gestionar tus finanzas personales, invertir inteligentemente y planificar tu futuro económico.',
-      duration: '6 semanas',
+      title: '💰 Educación financiera',
+      description: 'Domina tus finanzas desde joven y construye una base sólida para tu independencia económica.',
+      duration: '8 semanas',
       format: 'Online',
       level: 'Principiante',
       rating: 4.8,
@@ -39,82 +39,46 @@ const Programs: React.FC = () => {
       price: '199€',
       featured: false,
       highlights: [
-        'Presupuesto familiar',
-        'Inversiones básicas',
-        'Planificación financiera',
-        'Gestión de deudas'
+        'Presupuesto personal',
+        'Ahorro e inversión',
+        'Educación bursátil básica',
+        'Planificación financiera'
       ]
     },
     {
-      id: 'digital',
-      title: 'Marketing Digital',
-      description: 'Domina las estrategias de marketing digital más efectivas y aprende a crear campañas exitosas.',
+      id: 'vida-laboral',
+      title: '💼 Vida laboral',
+      description: 'Prepárate para tu primer empleo y destaca en el mundo profesional desde el primer día.',
       duration: '10 semanas',
       format: 'Presencial',
-      level: 'Avanzado',
+      level: 'Intermedio',
       rating: 4.9,
       students: 95,
-      price: '449€',
+      price: '349€',
       featured: true,
       highlights: [
-        'SEO y SEM',
-        'Social Media Marketing',
-        'Email Marketing',
-        'Analytics y métricas'
+        'Búsqueda de empleo efectiva',
+        'Elaboración de CV y LinkedIn',
+        'Preparación para entrevistas',
+        'Networking profesional'
       ]
     },
     {
-      id: 'emprendimiento',
-      title: 'Emprendimiento',
-      description: 'Convierte tu idea en un negocio exitoso con metodologías probadas y herramientas prácticas.',
+      id: 'liderazgo',
+      title: '🧭 Liderazgo & habilidades',
+      description: 'Comunicación, colaboración y liderazgo aplicado para destacar en cualquier entorno.',
       duration: '12 semanas',
       format: 'Híbrido',
-      level: 'Intermedio',
+      level: 'Avanzado',
       rating: 4.7,
       students: 120,
-      price: '399€',
+      price: '449€',
       featured: false,
       highlights: [
-        'Business Model Canvas',
-        'Validación de ideas',
-        'Financiación y inversión',
-        'Estrategia de crecimiento'
-      ]
-    },
-    {
-      id: 'productividad',
-      title: 'Productividad Personal',
-      description: 'Optimiza tu tiempo y energía para alcanzar tus objetivos de manera más eficiente.',
-      duration: '4 semanas',
-      format: 'Online',
-      level: 'Principiante',
-      rating: 4.6,
-      students: 180,
-      price: '149€',
-      featured: false,
-      highlights: [
-        'Gestión del tiempo',
-        'Organización personal',
-        'Hábitos productivos',
-        'Técnicas de concentración'
-      ]
-    },
-    {
-      id: 'comunicacion',
-      title: 'Comunicación Efectiva',
-      description: 'Mejora tus habilidades de comunicación para destacar en tu carrera profesional.',
-      duration: '6 semanas',
-      format: 'Híbrido',
-      level: 'Intermedio',
-      rating: 4.8,
-      students: 140,
-      price: '249€',
-      featured: false,
-      highlights: [
-        'Oratoria y presentaciones',
+        'Liderazgo transformacional',
         'Comunicación asertiva',
-        'Negociación',
-        'Comunicación intercultural'
+        'Trabajo en equipo',
+        'Gestión de conflictos'
       ]
     }
   ];
@@ -213,8 +177,8 @@ const Programs: React.FC = () => {
                       className="w-full group"
                       asChild
                     >
-                      <Link to={`/programs/${program.id}`}>
-                        {t.learnMore}
+                      <Link to={`/programas/${program.id}`}>
+                        Ver programa
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-smooth" />
                       </Link>
                     </Button>

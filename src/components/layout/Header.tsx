@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
 
   const navItems = [
     { name: t.home, href: '/' },
-    { name: t.programs, href: '/programs' },
+    { name: t.programs, href: '/programas' },
     { name: t.about, href: '/about' },
     { name: t.faq, href: '/faq' },
     { name: t.contact, href: '/contact' },
@@ -36,8 +36,8 @@ export const Header: React.FC = () => {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
         isScrolled 
-          ? 'bg-primary/95 backdrop-blur-md shadow-elegant' 
-          : 'bg-transparent'
+          ? 'glass-dark shadow-elegant' 
+          : 'glass'
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -97,7 +97,7 @@ export const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-primary/95 backdrop-blur-md border-t border-primary-light">
+          <div className="md:hidden glass-dark border-t border-white/10">
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
