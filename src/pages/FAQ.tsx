@@ -76,7 +76,7 @@ const FAQ: React.FC = () => {
             {t.frequentQuestions}
           </h1>
           <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto slide-in-up">
-            Encuentra respuestas a las preguntas más comunes sobre nuestros programas formativos
+            {t.faqSubtitle}
           </p>
         </div>
       </section>
@@ -112,20 +112,20 @@ const FAQ: React.FC = () => {
           <div className="max-w-2xl mx-auto">
             <MessageCircle className="h-16 w-16 text-gold mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary fade-in">
-              ¿No encontraste lo que buscabas?
+              {t.notFoundQuestion}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Nuestro equipo está aquí para ayudarte. Contáctanos y resolveremos todas tus dudas personalmente.
+              {t.notFoundDesc}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="lg" asChild>
                 <Link to="/contact">
-                  Contactar Soporte
+                  {t.contactSupport}
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/programs">
-                  Ver Programas
+                <Link to="/programas">
+                  {t.seePrograms}
                 </Link>
               </Button>
             </div>

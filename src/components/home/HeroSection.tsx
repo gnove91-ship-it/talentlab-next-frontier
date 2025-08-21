@@ -74,15 +74,15 @@ export const HeroSection: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 slide-in-up">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">1000+</div>
-              <div className="text-primary-foreground/80">Estudiantes Formados</div>
+              <div className="text-primary-foreground/80">{t.studentsFormed}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">15+</div>
-              <div className="text-primary-foreground/80">Programas Formativos</div>
+              <div className="text-primary-foreground/80">{t.trainingPrograms}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">95%</div>
-              <div className="text-primary-foreground/80">Tasa de Éxito</div>
+              <div className="text-primary-foreground/80">{t.successRate}</div>
             </div>
           </div>
         </div>

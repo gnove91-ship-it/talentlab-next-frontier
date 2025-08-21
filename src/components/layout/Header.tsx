@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
   const navItems = [
     { name: t.home, href: '/' },
     { name: t.programs, href: '/programas' },
-    { name: t.about, href: '/about' },
+    { name: t.team, href: '/about' },
     { name: t.faq, href: '/faq' },
   ];
 
@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <header className="fixed top-0 inset-x-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/10 transition-smooth">
+      <header className="fixed top-0 inset-x-0 z-50 glass border-b border-white/10 transition-smooth">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
               <div className="w-10 h-10 accent-gradient rounded-lg flex items-center justify-center">
                 <span className="text-primary font-bold text-xl">TL</span>
               </div>
-              <span className="text-xl font-bold text-white">
+              <span className="text-xl font-bold text-primary">
                 The Talent Lab
               </span>
             </Link>
@@ -55,7 +55,7 @@ export const Header: React.FC = () => {
                   className={`text-sm font-medium transition-smooth ${
                     isActive(item.href)
                       ? 'text-accent border-b-2 border-accent'
-                      : 'text-white hover:text-accent'
+                      : 'text-primary hover:text-accent'
                   }`}
                 >
                   {item.name}
@@ -81,7 +81,7 @@ export const Header: React.FC = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                className="md:hidden text-white"
+                className="md:hidden text-primary hover:text-accent"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -92,7 +92,7 @@ export const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white/10 backdrop-blur-md border-t border-white/10">
+          <div className="md:hidden glass border-t border-white/10">
             <div className="container mx-auto px-4 py-4">
               <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
@@ -102,7 +102,7 @@ export const Header: React.FC = () => {
                     className={`text-sm font-medium transition-smooth ${
                       isActive(item.href)
                         ? 'text-accent'
-                        : 'text-white hover:text-accent'
+                        : 'text-primary hover:text-accent'
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >

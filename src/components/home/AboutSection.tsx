@@ -10,18 +10,18 @@ export const AboutSection: React.FC = () => {
   const features = [
     {
       icon: Target,
-      title: 'Metodología Innovadora',
-      description: 'Programas diseñados con las últimas tendencias educativas y tecnológicas.',
+      title: t.innovativeMethodology,
+      description: t.innovativeMethodologyDesc,
     },
     {
       icon: Eye,
-      title: 'Visión de Futuro',
-      description: 'Preparamos a nuestros estudiantes para los desafíos del mañana.',
+      title: t.futureVision,
+      description: t.futureVisionDesc,
     },
     {
       icon: Heart,
-      title: 'Desarrollo Personal',
-      description: 'Enfoque integral que combina habilidades técnicas y personales.',
+      title: t.personalDevelopment,
+      description: t.personalDevelopmentDesc,
     },
   ];
 
@@ -61,7 +61,7 @@ export const AboutSection: React.FC = () => {
 
             <Button variant="primary" size="lg" asChild className="group">
               <Link to="/about">
-                Conoce Más Sobre Nosotros
+                {t.learnMoreAboutUs}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
               </Link>
             </Button>
@@ -77,25 +77,25 @@ export const AboutSection: React.FC = () => {
                     <div className="w-16 h-16 gold-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Target className="h-8 w-8 text-primary" />
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Objetivos Claros</h4>
-                    <p className="text-sm text-muted-foreground">Metas definidas para cada programa</p>
+                    <h4 className="font-semibold text-primary mb-2">{t.clearObjectives}</h4>
+                    <p className="text-sm text-muted-foreground">{t.clearObjectivesDesc}</p>
                   </div>
                   <div className="text-center">
                     <div className="w-16 h-16 primary-gradient rounded-xl flex items-center justify-center mx-auto mb-4">
                       <Eye className="h-8 w-8 text-primary-foreground" />
                     </div>
-                    <h4 className="font-semibold text-primary mb-2">Visión Integral</h4>
-                    <p className="text-sm text-muted-foreground">Desarrollo completo del talento</p>
+                    <h4 className="font-semibold text-primary mb-2">{t.integralVision}</h4>
+                    <p className="text-sm text-muted-foreground">{t.integralVisionDesc}</p>
                   </div>
                 </div>
                 
                 <div className="mt-8 p-6 bg-primary/5 rounded-xl">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary mb-2">
-                      +1000 Estudiantes
+                      {t.studentsTransformed}
                     </div>
                     <p className="text-muted-foreground">
-                      Han transformado su futuro con nosotros
+                      {t.studentsTransformedDesc}
                     </p>
                   </div>
                 </div>

@@ -11,33 +11,33 @@ const About: React.FC = () => {
   const values = [
     {
       icon: Target,
-      title: 'Excelencia',
-      description: 'Buscamos la excelencia en todo lo que hacemos, desde nuestros programas hasta el servicio al estudiante.'
+      title: t.excellence,
+      description: t.excellenceDesc
     },
     {
       icon: Eye,
-      title: 'Innovación',
-      description: 'Utilizamos metodologías innovadoras y tecnología de vanguardia para crear experiencias de aprendizaje únicas.'
+      title: t.innovation,
+      description: t.innovationDesc
     },
     {
       icon: Heart,
-      title: 'Compromiso',
-      description: 'Estamos comprometidos con el crecimiento personal y profesional de cada uno de nuestros estudiantes.'
+      title: t.commitment,
+      description: t.commitmentDesc
     },
     {
       icon: Users,
-      title: 'Comunidad',
-      description: 'Creamos una comunidad de aprendizaje donde todos pueden crecer y desarrollarse juntos.'
+      title: t.community,
+      description: t.communityDesc
     },
     {
       icon: Award,
-      title: 'Calidad',
-      description: 'Mantenemos los más altos estándares de calidad en todos nuestros programas formativos.'
+      title: t.quality,
+      description: t.qualityDesc
     },
     {
       icon: Globe,
-      title: 'Impacto Global',
-      description: 'Trabajamos para crear un impacto positivo que trascienda fronteras y transforme vidas.'
+      title: t.globalImpact,
+      description: t.globalImpactDesc
     }
   ];
 
@@ -73,10 +73,10 @@ const About: React.FC = () => {
       <section className="py-20 hero-gradient text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in">
-            Sobre The Talent Lab
+            {t.aboutThetalentlab}
           </h1>
           <p className="text-lg md:text-xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto slide-in-up">
-            Transformamos vidas a través de la educación, creando oportunidades para que cada persona alcance su máximo potencial
+            {t.aboutSubtitle}
           </p>
         </div>
       </section>
@@ -91,7 +91,7 @@ const About: React.FC = () => {
                 <Target className="h-12 w-12 text-gold mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-4 text-primary">{t.mission}</h3>
                 <p className="text-muted-foreground">
-                  Empoderar a individuos y organizaciones a través de programas educativos innovadores que fomenten el crecimiento personal y profesional sostenible.
+                  {t.missionDesc}
                 </p>
               </CardContent>
             </Card>
@@ -102,7 +102,7 @@ const About: React.FC = () => {
                 <Eye className="h-12 w-12 text-gold mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-4 text-primary">{t.vision}</h3>
                 <p className="text-muted-foreground">
-                  Ser la plataforma educativa líder que conecte el talento con las oportunidades del futuro, creando un impacto positivo a nivel global.
+                  {t.visionDesc}
                 </p>
               </CardContent>
             </Card>
@@ -113,7 +113,7 @@ const About: React.FC = () => {
                 <Heart className="h-12 w-12 text-gold mx-auto mb-4" />
                 <h3 className="text-2xl font-bold mb-4 text-primary">{t.values}</h3>
                 <p className="text-muted-foreground">
-                  Nuestros valores fundamentales guían cada decisión y acción, asegurando que mantengamos la excelencia y el compromiso con nuestros estudiantes.
+                  {t.valuesDesc}
                 </p>
               </CardContent>
             </Card>
@@ -122,7 +122,7 @@ const About: React.FC = () => {
           {/* Values Grid */}
           <div className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary fade-in">
-              Nuestros Valores
+              {t.ourValues}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {values.map((value, index) => {
@@ -221,19 +221,19 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="fade-in">
               <div className="text-4xl md:text-5xl font-bold text-gold mb-2">3+</div>
-              <div className="text-primary-foreground/80">Años de Experiencia</div>
+              <div className="text-primary-foreground/80">{t.yearsExperience}</div>
             </div>
             <div className="fade-in">
               <div className="text-4xl md:text-5xl font-bold text-gold mb-2">1200+</div>
-              <div className="text-primary-foreground/80">Estudiantes Graduados</div>
+              <div className="text-primary-foreground/80">{t.graduatedStudents}</div>
             </div>
             <div className="fade-in">
               <div className="text-4xl md:text-5xl font-bold text-gold mb-2">15+</div>
-              <div className="text-primary-foreground/80">Programas Activos</div>
+              <div className="text-primary-foreground/80">{t.activePrograms}</div>
             </div>
             <div className="fade-in">
               <div className="text-4xl md:text-5xl font-bold text-gold mb-2">98%</div>
-              <div className="text-primary-foreground/80">Satisfacción</div>
+              <div className="text-primary-foreground/80">{t.satisfaction}</div>
             </div>
           </div>
         </div>

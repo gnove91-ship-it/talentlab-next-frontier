@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
 
         <div className="border-t border-primary-light mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © 2025 The Talent Lab. Todos los derechos reservados.
+            © 2025 The Talent Lab. {t.allRightsReserved}.
           </p>
         </div>
       </div>
