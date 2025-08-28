@@ -8,28 +8,28 @@ export const TestimonialsSection: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'María González',
-      role: 'Marketing Manager',
-      company: 'Tech Solutions',
-      content: 'The Talent Lab transformó completamente mi perspectiva profesional. Los programas son prácticos y aplicables inmediatamente.',
+      name: 'Dr. Carmen López',
+      role: 'Directora de Orientación',
+      company: 'Universidad Complutense Madrid',
+      content: 'Las charlas de The Talent Lab han proporcionado a nuestros estudiantes herramientas invaluables para su futuro académico y profesional.',
       rating: 5,
-      avatar: 'MG',
+      avatar: 'CL',
     },
     {
-      name: 'Carlos Rodríguez',
-      role: 'Emprendedor',
-      company: 'StartUp Innovadora',
-      content: 'Gracias al programa de emprendimiento pude estructurar mi idea de negocio y conseguir la financiación necesaria.',
+      name: 'Prof. Miguel Hernández',
+      role: 'Coordinador Académico',
+      company: 'Colegio San Patricio',
+      content: 'La metodología innovadora de sus talleres ha captado la atención de todos nuestros alumnos de bachillerato.',
       rating: 5,
-      avatar: 'CR',
+      avatar: 'MH',
     },
     {
-      name: 'Ana Martín',
-      role: 'Directora Financiera',
-      company: 'Consulting Group',
-      content: 'El programa de liderazgo me dio las herramientas necesarias para gestionar equipos de alto rendimiento.',
+      name: 'Dra. Elena Ruiz',
+      role: 'Decana de Estudiantes',
+      company: 'IE University',
+      content: 'Sus programas de orientación han demostrado ser fundamentales en la preparación de nuestros futuros universitarios.',
       rating: 5,
-      avatar: 'AM',
+      avatar: 'ER',
     },
   ];
 
@@ -94,25 +94,6 @@ export const TestimonialsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Additional Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-16 fade-in">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">98%</div>
-            <div className="text-muted-foreground">Satisfacción del Cliente</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">1,200+</div>
-            <div className="text-muted-foreground">Graduados</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">15+</div>
-            <div className="text-muted-foreground">Programas Activos</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">4.9/5</div>
-            <div className="text-muted-foreground">Valoración Media</div>
-          </div>
-        </div>
       </div>
     </section>
   );

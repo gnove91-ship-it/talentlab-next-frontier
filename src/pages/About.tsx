@@ -41,19 +41,19 @@ const About: React.FC = () => {
     }
   ];
 
-  const founders = [
+  const teamMembers = [
     {
-      name: 'Elena Martínez',
-      role: 'CEO & Co-fundadora',
+      name: 'Miguel Valenzuela',
+      role: 'Co-fundador & CEO',
       image: founderImage1,
-      bio: 'Con más de 15 años de experiencia en educación y desarrollo organizacional, Elena ha liderado proyectos de transformación en empresas multinacionales. Su pasión por el desarrollo del talento humano la llevó a cofundar The Talent Lab con la visión de democratizar el acceso a una educación de calidad.',
+      bio: 'Con más de 15 años de experiencia en educación y desarrollo organizacional, Miguel ha liderado proyectos de transformación en empresas multinacionales. Su pasión por el desarrollo del talento humano la llevó a cofundar The Talent Lab con la visión de democratizar el acceso a una educación de calidad.',
       expertise: ['Desarrollo Organizacional', 'Liderazgo', 'Educación Corporativa']
     },
     {
-      name: 'David Chen',
-      role: 'CTO & Co-fundador',
+      name: 'Fernando Novella',
+      role: 'Co-fundador & CTO',
       image: founderImage2,
-      bio: 'David combina su background en tecnología con su experiencia en educación digital. Ha desarrollado plataformas educativas utilizadas por miles de estudiantes a nivel mundial. Su enfoque innovador en el aprendizaje digital ha sido clave para el éxito de The Talent Lab.',
+      bio: 'Fernando combina su background en tecnología con su experiencia en educación digital. Ha desarrollado plataformas educativas utilizadas por miles de estudiantes a nivel mundial. Su enfoque innovador en el aprendizaje digital ha sido clave para el éxito de The Talent Lab.',
       expertise: ['Tecnología Educativa', 'Innovación Digital', 'Product Management']
     }
   ];
@@ -148,29 +148,29 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Founders Section */}
+      {/* Team Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary fade-in">
-            {t.founders}
+            {t.team}
           </h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {founders.map((founder, index) => (
+            {teamMembers.map((member, index) => (
               <Card key={index} className="hover-lift shadow-card slide-in-up">
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
                     <img 
-                      src={founder.image} 
-                      alt={founder.name}
-                      className="w-32 h-32 rounded-full object-cover shadow-gold"
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-32 h-32 rounded-full object-cover shadow-accent"
                     />
                     <div className="flex-1 text-center md:text-left">
-                      <h3 className="text-2xl font-bold mb-2 text-primary">{founder.name}</h3>
-                      <p className="text-gold font-semibold mb-4">{founder.role}</p>
-                      <p className="text-muted-foreground mb-4 leading-relaxed">{founder.bio}</p>
+                      <h3 className="text-2xl font-bold mb-2 text-primary">{member.name}</h3>
+                      <p className="text-accent font-semibold mb-4">{member.role}</p>
+                      <p className="text-muted-foreground mb-4 leading-relaxed">{member.bio}</p>
                       <div className="flex flex-wrap gap-2 justify-center md:justify-start">
-                        {founder.expertise.map((skill, idx) => (
+                        {member.expertise.map((skill, idx) => (
                           <span 
                             key={idx} 
                             className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
@@ -188,56 +188,6 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Collaborators Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary fade-in">
-            {t.collaborators}
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {collaborators.map((collaborator, index) => (
-              <Card 
-                key={index} 
-                className="text-center hover-lift shadow-card slide-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-primary font-bold text-lg">{collaborator.initials}</span>
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2 text-primary">{collaborator.name}</h3>
-                  <p className="text-muted-foreground">{collaborator.role}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 hero-gradient text-primary-foreground">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="fade-in">
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">3+</div>
-              <div className="text-primary-foreground/80">{t.yearsExperience}</div>
-            </div>
-            <div className="fade-in">
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">1200+</div>
-              <div className="text-primary-foreground/80">{t.graduatedStudents}</div>
-            </div>
-            <div className="fade-in">
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">15+</div>
-              <div className="text-primary-foreground/80">{t.activePrograms}</div>
-            </div>
-            <div className="fade-in">
-              <div className="text-4xl md:text-5xl font-bold text-gold mb-2">98%</div>
-              <div className="text-primary-foreground/80">{t.satisfaction}</div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

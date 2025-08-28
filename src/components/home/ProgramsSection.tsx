@@ -13,49 +13,31 @@ export const ProgramsSection: React.FC = () => {
       id: 'orientacion',
       title: '🎓 Orientación preuniversitaria',
       description: 'Descubre tu camino académico.',
-      duration: '6 semanas',
-      format: 'Híbrido',
-      level: 'Intermedio',
-      rating: 4.9,
-      students: 150,
-      featured: true,
+      duration: '8 sesiones',
+      format: 'Online',
+      age: '16-18 años',
+      featured: false,
       cta: 'Ver programa'
     },
     {
       id: 'finanzas',
       title: '💰 Educación financiera',
       description: 'Domina tus finanzas desde joven.',
-      duration: '8 semanas',
-      format: 'Online',
-      level: 'Principiante',
-      rating: 4.8,
-      students: 200,
-      featured: false,
+      duration: '6 sesiones',
+      format: 'Online + Presencial',
+      age: '14-18 años',
+      featured: true,
       cta: 'Ver programa'
     },
     {
       id: 'vida-laboral',
       title: '💼 Vida laboral',
       description: 'Prepárate para tu primer empleo.',
-      duration: '10 semanas',
-      format: 'Presencial',
-      level: 'Intermedio',
-      rating: 4.9,
-      students: 95,
-      featured: true,
-      cta: 'Ver programa'
-    },
-    {
-      id: 'liderazgo',
-      title: '🧭 Liderazgo & habilidades',
-      description: 'Comunicación, colaboración y liderazgo aplicado.',
-      duration: '12 semanas',
-      format: 'Híbrido',
-      level: 'Avanzado',
-      rating: 4.7,
-      students: 120,
+      duration: '10 sesiones',
+      format: 'Online',
+      age: '17-22 años',
       featured: false,
-      cta: 'Solicitar información'
+      cta: 'Ver programa'
     },
   ];
 
@@ -67,9 +49,24 @@ export const ProgramsSection: React.FC = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-primary">
             {t.programsTitle}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
             {t.programsSubtitle}
           </p>
+          
+          {/* View All Programs Button - Moved Above Cards */}
+          <div className="mb-8">
+            <Button 
+              variant="accent" 
+              size="lg"
+              asChild
+              className="shadow-accent hover:shadow-elegant transition-all duration-300"
+            >
+              <Link to="/programas">
+                Ver todos los programas
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
 
         {/* Programs Grid */}
@@ -110,24 +107,16 @@ export const ProgramsSection: React.FC = () => {
                   </div>
                   <div className="text-center">
                     <BookOpen className="h-5 w-5 text-accent mx-auto mb-1" />
-                    <div className="text-xs text-muted-foreground">{t.format}</div>
+                    <div className="text-xs text-muted-foreground">Sesiones</div>
                     <div className="text-sm font-medium text-primary">{program.format}</div>
                   </div>
                   <div className="text-center">
                     <Users className="h-5 w-5 text-accent mx-auto mb-1" />
-                    <div className="text-xs text-muted-foreground">{t.level}</div>
-                    <div className="text-sm font-medium text-primary">{program.level}</div>
+                    <div className="text-xs text-muted-foreground">Edad</div>
+                    <div className="text-sm font-medium text-primary">{program.age}</div>
                   </div>
                 </div>
 
-                {/* Rating and Students */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-1">
-                    <Star className="h-4 w-4 text-accent fill-current" />
-                    <span className="text-sm font-medium text-primary">{program.rating}</span>
-                    <span className="text-xs text-muted-foreground">({program.students} estudiantes)</span>
-                  </div>
-                </div>
 
                 {/* CTA Button */}
                 <Button 
@@ -155,15 +144,6 @@ export const ProgramsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* View All Programs Button */}
-        <div className="text-center fade-in">
-          <Button variant="outline_accent" size="lg" asChild className="group">
-            <Link to="/programas">
-              Ver Todos los Programas
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-smooth" />
-            </Link>
-          </Button>
-        </div>
       </div>
     </section>
   );

@@ -38,12 +38,11 @@ export const Header: React.FC = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 accent-gradient rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">TL</span>
-              </div>
-              <span className="text-xl font-bold text-primary">
-                The Talent Lab
-              </span>
+              <img 
+                src="/src/assets/thetalentlab-logo.png" 
+                alt="TheTalentLab" 
+                className="h-10 w-auto filter brightness-0 invert"
+              />
             </Link>
 
             {/* Desktop Navigation */}

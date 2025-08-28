@@ -37,7 +37,7 @@ const Programs: React.FC = () => {
       rating: 4.8,
       students: 200,
       price: '199€',
-      featured: false,
+      featured: true,
       highlights: [
         'Presupuesto personal',
         'Ahorro e inversión',
@@ -79,6 +79,42 @@ const Programs: React.FC = () => {
         'Comunicación asertiva',
         'Trabajo en equipo',
         'Gestión de conflictos'
+      ]
+    },
+    {
+      id: 'inteligencia-artificial',
+      title: '🤖 Introducción a la IA',
+      description: 'Fundamentos de inteligencia artificial y sus aplicaciones prácticas.',
+      duration: '8 semanas',
+      format: 'Online',
+      level: 'Intermedio',
+      rating: 4.9,
+      students: 85,
+      price: '299€',
+      featured: false,
+      highlights: [
+        'Machine Learning básico',
+        'Herramientas de IA',
+        'Ética en IA',
+        'Aplicaciones prácticas'
+      ]
+    },
+    {
+      id: 'producto-digital',
+      title: '📱 Creación de Producto Digital',
+      description: 'Aprende a crear y lanzar productos digitales exitosos.',
+      duration: '10 semanas',
+      format: 'Híbrido',
+      level: 'Avanzado',
+      rating: 4.8,
+      students: 65,
+      price: '399€',
+      featured: false,
+      highlights: [
+        'Diseño de producto',
+        'Marketing digital',
+        'Desarrollo ágil',
+        'Estrategia de lanzamiento'
       ]
     }
   ];
@@ -199,23 +235,6 @@ const Programs: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary fade-in">
-            ¿No encuentras el programa que buscas?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Contáctanos y te ayudaremos a encontrar la formación perfecta para tus objetivos
-          </p>
-          <Button variant="primary" size="lg" asChild>
-            <Link to="/contact">
-              Contáctanos
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </section>
     </div>
   );
 };

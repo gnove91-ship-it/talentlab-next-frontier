@@ -115,13 +115,13 @@ const Contact: React.FC = () => {
       {/* Contact Content */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
             <div className="slide-in-left">
               <Card className="shadow-card">
                 <CardHeader>
                   <CardTitle className="text-2xl text-primary flex items-center">
-                    <Send className="mr-3 h-6 w-6 text-gold" />
+                    <Send className="mr-3 h-6 w-6 text-accent" />
                     Envíanos un Mensaje
                   </CardTitle>
                 </CardHeader>
@@ -139,7 +139,7 @@ const Contact: React.FC = () => {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="transition-smooth focus:ring-gold focus:border-gold"
+                          className="transition-smooth focus:ring-accent focus:border-accent"
                         />
                       </div>
                       <div>
@@ -153,7 +153,7 @@ const Contact: React.FC = () => {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="transition-smooth focus:ring-gold focus:border-gold"
+                          className="transition-smooth focus:ring-accent focus:border-accent"
                         />
                       </div>
                     </div>
@@ -169,7 +169,7 @@ const Contact: React.FC = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="transition-smooth focus:ring-gold focus:border-gold"
+                          className="transition-smooth focus:ring-accent focus:border-accent"
                         />
                       </div>
                       <div>
@@ -183,7 +183,7 @@ const Contact: React.FC = () => {
                           value={formData.subject}
                           onChange={handleInputChange}
                           required
-                          className="transition-smooth focus:ring-gold focus:border-gold"
+                          className="transition-smooth focus:ring-accent focus:border-accent"
                         />
                       </div>
                     </div>
@@ -199,7 +199,7 @@ const Contact: React.FC = () => {
                         value={formData.message}
                         onChange={handleInputChange}
                         required
-                        className="transition-smooth focus:ring-gold focus:border-gold"
+                        className="transition-smooth focus:ring-accent focus:border-accent"
                         placeholder="Cuéntanos cómo podemos ayudarte..."
                       />
                     </div>
@@ -240,7 +240,7 @@ const Contact: React.FC = () => {
                       <Card key={index} className="hover-lift shadow-card">
                         <CardContent className="p-6">
                           <div className="flex items-center space-x-4">
-                            <div className="w-12 h-12 gold-gradient rounded-lg flex items-center justify-center">
+                            <div className="w-12 h-12 accent-gradient rounded-lg flex items-center justify-center">
                               <Icon className="h-6 w-6 text-primary" />
                             </div>
                             <div className="flex-1">
@@ -259,80 +259,6 @@ const Contact: React.FC = () => {
                   })}
                 </div>
               </div>
-
-              {/* Office Hours */}
-              <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-xl text-primary flex items-center">
-                    <Clock className="mr-3 h-5 w-5 text-gold" />
-                    Horario de Atención
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
-                    {officeHours.map((schedule, index) => (
-                      <div key={index} className="flex justify-between items-center">
-                        <span className="text-primary font-medium">{schedule.day}</span>
-                        <span className="text-muted-foreground">{schedule.hours}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Office Location */}
-              <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-xl text-primary flex items-center">
-                    <MapPin className="mr-3 h-5 w-5 text-gold" />
-                    Nuestra Oficina
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Calle Gran Vía, 123<br />
-                    28013 Madrid, España
-                  </p>
-                  <div className="bg-muted/50 rounded-lg p-4 text-center">
-                    <MapPin className="h-8 w-8 text-gold mx-auto mb-2" />
-                    <p className="text-sm text-muted-foreground">
-                      Mapa interactivo próximamente
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Support Team */}
-              <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle className="text-xl text-primary flex items-center">
-                    <HeadphonesIcon className="mr-3 h-5 w-5 text-gold" />
-                    Equipo de Soporte
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Users className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="font-medium text-primary">Soporte Técnico</div>
-                        <div className="text-sm text-muted-foreground">Disponible 24/7</div>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                        <MessageSquare className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="font-medium text-primary">Asesoramiento Académico</div>
-                        <div className="text-sm text-muted-foreground">Lun - Vie, 9:00 - 18:00</div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
